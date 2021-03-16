@@ -23,17 +23,16 @@
     <meta name="author" content="Creative Tim">
     @yield('title')
     <!-- Favicon -->
-    <link rel="icon" href="http://localhost:8000/styles/assets/img/brand/favicon.png" type="image/png">
+    <link rel="icon" href="{{asset('styles/assets/img/brand/favicon.png')}}" type="image/png">
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
     <!-- Icons -->
-    <link rel="stylesheet" href="http://localhost:8000/styles/assets/vendor/nucleo/css/nucleo.css" type="text/css">
-    <link rel="stylesheet"
-        href="http://localhost:8000/styles/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
+    <link rel="stylesheet" href="{{asset('styles/assets/vendor/nucleo/css/nucleo.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('styles/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css')}}" type="text/css">
     <!-- Page plugins -->
     <!-- Argon CSS -->
-    <link rel="stylesheet" href="http://localhost:8000/styles/assets/css/argon.css?v=1.2.0&quot; type=&quot;text/css">
-    <!-- Jquery -->
+    <link rel="stylesheet" href="{{asset('styles/assets/css/argon.css?v=1.2.0" type="text/css')}}">
+       <!-- Jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/d3js/6.5.0/d3.min.js"></script>
 </head>
 
@@ -388,15 +387,15 @@
 
     <!-- Argon Scripts -->
     <!-- Core -->
-    <script src="http://localhost:8000/styles/assets/vendor/jquery/dist/jquery.min.js"></script>
-    <script src="http://localhost:8000/styles/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="http://localhost:8000/styles/assets/vendor/js-cookie/js.cookie.js"></script>
-    <script src="http://localhost:8000/styles/assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js"></script>
-    <script src="http://localhost:8000/styles/assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js"></script>
+    <script src="{{asset('styles/assets/vendor/jquery/dist/jquery.min.js')}}"></script>
+    <script src="{{asset('styles/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{asset('styles/assets/vendor/js-cookie/js.cookie.js')}}"></script>
+    <script src="{{asset('styles/assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js')}}"></script>
+    <script src="{{asset('styles/assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js')}}"></script>
     <!-- Optional JS -->
-
+    {{-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTTfWur0PDbZWPr7Pmq8K3jiDp0_xUziI"></script> --}}
     <!-- Argon JS -->
-    <script src="http://localhost:8000/styles/assets/js/argon.js?v=1.2.0"></script>
-</body>
+    <script src="{{asset('styles/assets/js/argon.js?v=1.2.0')}}"></script>
+  </body>
 
 </html>
