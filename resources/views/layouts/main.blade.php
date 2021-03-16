@@ -19,7 +19,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
+    <meta name="description" content="NSJ-SHOP">
     <meta name="author" content="Creative Tim">
     @yield('title')
     <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=60502e974d5573001844fdae&product=sop' async='async'></script>    <!-- Favicon -->
