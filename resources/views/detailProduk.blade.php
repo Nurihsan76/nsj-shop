@@ -2,9 +2,6 @@
 
 @section('title')
     <title>Toko {{ $user->name }}</title>
-    <script type='text/javascript'
-        src='https://platform-api.sharethis.com/js/sharethis.js#property=604f1644e898f600188713c7&product=inline-share-buttons'
-        async='async'></script>
 @endsection
 @section('mini_title')
 

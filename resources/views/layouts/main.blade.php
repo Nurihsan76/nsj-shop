@@ -22,7 +22,7 @@
     <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
     <meta name="author" content="Creative Tim">
     @yield('title')
-    <!-- Favicon -->
+    <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=60502e974d5573001844fdae&product=sop' async='async'></script>    <!-- Favicon -->
     <link rel="icon" href="{{asset('styles/assets/img/brand/favicon.png')}}" type="image/png">
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
