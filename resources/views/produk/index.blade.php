@@ -437,19 +437,22 @@
                                                     <p id="harga" class="card-text" style="color: red"><b> Rp.
                                                             {{ number_format($item['harga'], 0, ',', '.') }}</b></p>
                                                     <div class="row mt-3 ml-1">
-                                                        <a href="" class="btn btn-success btn-sm mt-1 mb-1" data-toggle="modal"
+                                                        <a href="" class="btn btn-success btn-sm mt-1 mb-1"
+                                                            data-toggle="modal"
                                                             data-target="#ubahModal-{{ $item->id }}">
                                                             Ubah
                                                         </a>
+                                                        <a href="whatsapp://send?text={{ url(Auth::user()->nomor . '/toko/' . $item->id) }}"
+                                                            class="btn btn-primary btn-sm mt-1 mb-1"> Shere WA Mobile</a>
                                                         <a href="https://web.whatsapp.com/send?text={{ url(Auth::user()->nomor . '/toko/' . $item->id) }}"
-                                                            class="btn btn-primary btn-sm mt-1 mb-1"> Shere</a>
-                                                            <form action="{{ url('produk/' . $item->id) }}" method="post">
-                                                                @csrf
-                                                                @method('delete')
-                                                                <button type="submit" name="submit"
-                                                                    class="btn btn-danger btn-sm mt-1 mb-1"
-                                                                    onclick="return confirm('Yakin Ingin Menghapus Produk Ini?')">delete</button>
-                                                            </form>
+                                                            class="btn btn-primary btn-sm mt-1 mb-1"> Shere WA Web</a>
+                                                        <form action="{{ url('produk/' . $item->id) }}" method="post">
+                                                            @csrf
+                                                            @method('delete')
+                                                            <button type="submit" name="submit"
+                                                                class="btn btn-danger btn-sm mt-1 mb-1"
+                                                                onclick="return confirm('Yakin Ingin Menghapus Produk Ini?')">delete</button>
+                                                        </form>
                                                     </div>
                                             </div>
                                         </div>
