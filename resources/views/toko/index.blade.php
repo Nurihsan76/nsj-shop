@@ -104,7 +104,7 @@
                                             {{ Auth::user()->nomor }}</h4>
                                         <h4 class="font-weight-normal text-left"><i class="ni ni-world-2"></i>
                                             {{ url(Auth::user()->nomor . '/toko') }}</h4>
-                                        <a href="https://whatsapp://send?text={{ url(Auth::user()->nomor . '/toko') }}"
+                                        <a href="whatsapp://send?text={{ url(Auth::user()->nomor . '/toko') }}"
                                             class="btn btn-primary btn-sm mt-1 mb-1"> <i class="ni ni-curved-next mr-1"></i>
                                             Shere Link Toko</a>
                                         {{-- <a href="https://web.whatsapp.com/send?text={{ url(Auth::user()->nomor . '/toko') }}"
