@@ -7,6 +7,7 @@ use App\Produk;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class ProdukController extends Controller
 {

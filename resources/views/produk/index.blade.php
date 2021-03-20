@@ -210,8 +210,8 @@
 
                                 <div class="col-md-6">
                                     <input id="nama" type="text" class="form-control @error('nama') is-invalid @enderror"
-                                        name="nama" value="{{ old('nama') ? old('nama') : $data->nama }}" autocomplete="nama" autofocus required
-                                        placeholder="Nama Produk">
+                                        name="nama" value="{{ old('nama') ? old('nama') : $data->nama }}"
+                                        autocomplete="nama" autofocus required placeholder="Nama Produk">
 
                                     @error('nama')
                                         <span class="invalid-feedback" role="alert">
@@ -227,8 +227,8 @@
 
                                 <div class="col-md-6">
                                     <input id="merek" type="text" class="form-control @error('merek') is-invalid @enderror"
-                                        name="merek" value="{{ old('merek') ? old('merek') : $data->merek }}" autocomplete="merek" autofocus required
-                                        placeholder="Merek Produk">
+                                        name="merek" value="{{ old('merek') ? old('merek') : $data->merek }}"
+                                        autocomplete="merek" autofocus required placeholder="Merek Produk">
 
                                     @error('merek')
                                         <span class="invalid-feedback" role="alert">
@@ -245,8 +245,8 @@
                                 <div class="col-md-6">
                                     <input id="harga" type="number"
                                         class="form-control @error('harga') is-invalid @enderror" name="harga"
-                                        value="{{ old('harga') ? old('harga') : $data->harga }}" autocomplete="harga" autofocus required
-                                        placeholder="Harga Produk">
+                                        value="{{ old('harga') ? old('harga') : $data->harga }}" autocomplete="harga"
+                                        autofocus required placeholder="Harga Produk">
                                     @error('harga')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -262,8 +262,10 @@
                                 <div class="col-md-6">
                                     <input id="descripsi_singkat" type="text"
                                         class="form-control @error('descripsi_singkat') is-invalid @enderror"
-                                        name="descripsi_singkat" value="{{ old('descripsi_singkat') ? old('descripsi_singkat') : $data->descripsi_singkat }}" autofocus
-                                        required autocomplete="descripsi_singkat" placeholder="Descripsi Singkat Produk">
+                                        name="descripsi_singkat"
+                                        value="{{ old('descripsi_singkat') ? old('descripsi_singkat') : $data->descripsi_singkat }}"
+                                        autofocus required autocomplete="descripsi_singkat"
+                                        placeholder="Descripsi Singkat Produk">
                                     @error('descripsi_singkat')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -319,7 +321,8 @@
                                     <div>
                                         <input id="foto" type="file"
                                             class="form-control @error('foto') is-invalid @enderror" name="foto"
-                                            value="{{ old('foto') ? old('foto') : $data->foto }}" autocomplete="foto" autofocus>
+                                            value="{{ old('foto') ? old('foto') : $data->foto }}" autocomplete="foto"
+                                            autofocus>
                                         @error('foto')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -421,28 +424,32 @@
                                 </div>
                             </div>
                         @endif
-                        <div class="row">
+                        <div class="row" id="card">
                             @foreach ($produk as $item)
                                 <div class="col-md-4 sm-4">
-                                    <a href=" {{ url("/produk/$item->id") }} ">
+                                    <a id="link" href=" {{ url("/produk/$item->id") }} ">
                                         <div class="card">
-                                            <img class="card-img-top" src="{{ $item['foto'] }}" alt="Card image cap">
+                                            <img id="foto" class="card-img-top" src="{{ $item['foto'] }}"
+                                                alt="Card image cap">
                                             <div class="card-body">
-                                                <h4 class="card-title mb-3">{{ $item['nama'] }} -
+                                                <h4 id="title" class="card-title mb-3">{{ $item['nama'] }} -
                                                     {{ $item['descripsi_singkat'] }}
-                                                    <p class="card-text" style="color: red"><b> Rp. {{ number_format($item['harga'], 0, ',', '.') }}</b></p>
+                                                    <p id="harga" class="card-text" style="color: red"><b> Rp.
+                                                            {{ number_format($item['harga'], 0, ',', '.') }}</b></p>
                                                     <div class="row mt-3 ml-1">
-                                                        <a href="" class="btn btn-success btn-sm" data-toggle="modal"
+                                                        <a href="" class="btn btn-success btn-sm mt-1 mb-1" data-toggle="modal"
                                                             data-target="#ubahModal-{{ $item->id }}">
                                                             Ubah
                                                         </a>
-                                                        <form action="{{ url('produk/' . $item->id) }}" method="post">
-                                                            @csrf
-                                                            @method('delete')
-                                                            <button type="submit" name="submit"
-                                                                class="btn btn-danger btn-sm"
-                                                                onclick="return confirm('Yakin Ingin Menghapus Produk Ini?')">delete</button>
-                                                        </form>
+                                                        <a href="https://web.whatsapp.com/send?text={{ url(Auth::user()->nomor . '/toko/' . $item->id) }}"
+                                                            class="btn btn-primary btn-sm mt-1 mb-1"> Shere</a>
+                                                            <form action="{{ url('produk/' . $item->id) }}" method="post">
+                                                                @csrf
+                                                                @method('delete')
+                                                                <button type="submit" name="submit"
+                                                                    class="btn btn-danger btn-sm mt-1 mb-1"
+                                                                    onclick="return confirm('Yakin Ingin Menghapus Produk Ini?')">delete</button>
+                                                            </form>
                                                     </div>
                                             </div>
                                         </div>
@@ -455,7 +462,8 @@
                     </div>
                 </div>
             </div>
-        </div><!-- /#right-panel -->
+        </div>
+        <!-- /#right-panel -->
 
         <!-- Right Panel -->
     @endsection

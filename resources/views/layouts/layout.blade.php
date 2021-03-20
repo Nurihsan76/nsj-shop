@@ -34,6 +34,7 @@
   <!-- Argon CSS -->
   <link rel="stylesheet" href="{{asset('styles/assets/css/argon.css?v=1.2.0" type="text/css')}}">
   <!-- Jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/d3js/6.5.0/d3.min.js"></script>
 </head>
 
@@ -90,7 +91,7 @@
                 <div class="input-group-prepend">
                   <span class="input-group-text"><i class="fas fa-search"></i></span>
                 </div>
-                <input class="form-control" placeholder="Search" type="text" >
+                <input class="form-control" name="search" id="search" placeholder="Search Produk" type="text" >
               </div>
             </div>
             <button type="button" class="close" data-action="search-close" data-target="#navbar-search-main" aria-label="Close">

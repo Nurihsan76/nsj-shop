@@ -78,15 +78,15 @@
                     <h3> {{ $produk['descripsi_lengkap'] }} </h3>
                 </div>
                 <div class="row mt-3 mb-3 ml-1">
-                    <a href="https://wa.me/{{ $user->nomor }}?text={{ url($user->nomor . '/toko/' . $produk['id']) }}"
-                        class="btn btn-primary btn-sm"> Hubungi Penjual </a>
+                    <a href="https://wa.me/{{ $user->nomor }}?text={{ url($user->nomor . '/toko/' . $produk['id']) }}" class="btn btn-primary btn-sm"> Hubungi Penjual </a>
                     <a href="{{ url($user->nomor . '/toko') }}" class="btn btn-success btn-sm"> Kembali </a>
                 </div>
                 <div class="top-right links">
-                    @auth
+                    {{-- @auth
                         <!-- ShareThis BEGIN -->
-                        <div class="sharethis-inline-share-buttons"></div><!-- ShareThis END -->
-                    @endauth
+                        <div class="sharethis-inline-share-buttons"></div>
+                        <!-- ShareThis END -->
+                    @endauth --}}
                 </div>
             </div>
         </div>
